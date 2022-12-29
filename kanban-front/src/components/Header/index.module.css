@@ -1,0 +1,47 @@
+.header {
+    background: #0067A3;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+.header_content {
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    align-items: center;
+    font-family: 'Nunito Sans';
+}
+
+.svg {
+    background-image: url("../../svg/Vector.svg");
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.svg2 {
+    background-image: url("../../svg/Vector2.svg");
+    height: 20px;
+    width: 20px;
+    margin-left: 12px;
+    margin-top: 13px;
+}
+
+.header_profil {
+    padding-right: 30px;
+    display: flex;
+}

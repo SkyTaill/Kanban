@@ -1,0 +1,11 @@
+.footer {
+    background: #0067A3;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 83px;
+    align-items: center;
+    font-family: 'Nunito Sans';
+}

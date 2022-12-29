@@ -5,6 +5,7 @@ import "./index.css"
 
 const Board = props => {
     const { tasks, setTask } = props
+
     return (
         <div>
             {Object.values(LIST_TYPES).map(type => {

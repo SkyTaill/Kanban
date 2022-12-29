@@ -6,6 +6,7 @@ const List = props => {
     const { title, type, tasks, setTask } = props
     return (<div>
         <h2>{title}</h2>
+
         {tasks.map(task => {
             return (
                 <div key={task.id} className={css.task}>{task.title}</div>

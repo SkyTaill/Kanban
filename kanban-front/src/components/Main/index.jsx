@@ -1,6 +1,6 @@
 
 import React from 'react';
-import css from "./index.css"
+import css from "./index.module.css"
 import Board from '../Board';
 const Main = props => {
     //const { tasks, setTask } = props

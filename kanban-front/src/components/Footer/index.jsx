@@ -1,6 +1,6 @@
 
 import React from 'react';
-import "./index.css"
+import css from "./index.module.css"
 
 class Footer extends React.Component {
 
@@ -9,7 +9,9 @@ class Footer extends React.Component {
     render() {
 
         return (
-            <p>s</p>
+            <footer className={css.footer}>
+                <div className={css.container}>sadasd</div>
+            </footer>
         );
     }
 }
