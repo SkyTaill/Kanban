@@ -37,8 +37,16 @@
     background-color: white;
 }
 
-.svg2 {
-    background-image: url("../../svg/Vector2.svg");
+.svg_up {
+    mask-image: url("../../svg/button-menu-up.svg");
+    height: 20px;
+    width: 20px;
+    margin-left: 12px;
+    margin-top: 13px;
+}
+
+.svg_down {
+    mask-image: url("../../svg/button-menu-down.svg");
     height: 20px;
     width: 20px;
     margin-left: 12px;

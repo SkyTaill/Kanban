@@ -1,35 +1,66 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import css from "./index.module.css"
 
-class Header extends React.Component {
+
+const Header = () => {
 
 
 
-    render() {
+    const [state, setState] = useState(false);
 
-        return (
 
-            <header className={css.header}>
-                <div className={css.header_content}>
-                    <h1 className={css.text}>Awesome Kanban Board</h1>
-                    <div className={css.profil}>
-                        <div className={css.header_profil}>
 
-                            <div className={css.svg}></div>
-                            <div className={css.svg2}></div>
-                        </div>
-                        <div className={css.prof_menu}>
-                            <h3 className={css.text_profil}>Profile</h3>
-                            <h3 className={css.logOut}>Log Out</h3>
-                        </div>
+
+    const click = () => {
+        if (state) {
+            setState(false);
+        } else {
+            setState(true);
+        }
+    }
+
+    return (
+
+        <header className={css.header}>
+            <div className={css.header_content}>
+                <h1 className={css.text}>Awesome Kanban Board</h1>
+                <div className={css.profil}>
+                    <div className={css.header_profil}>
+                        <div className={css.svg}></div>
+                        <button className={state ? css.svg_down : css.svg_up} onClick={click}></button>
                     </div>
 
 
+                    <CheckProfMenu
+                        state={state}
+                    />
+
                 </div>
-            </header>
-        );
-    }
+
+
+            </div>
+        </header>
+    );
+
 }
+
+function CheckProfMenu(props) {
+    const state = props.state;
+
+    if (state) {
+        return (
+            <div className={css.prof_menu}>
+                <h3 className={css.text_profil}>Profile</h3>
+                <h3 className={css.logOut}>Log Out</h3>
+            </div>
+        )
+    }
+    return (
+        null
+    )
+}
+
+
 
 export default Header;
