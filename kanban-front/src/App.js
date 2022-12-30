@@ -9,7 +9,7 @@ import Header from './components/Header';
 function App() {
   const [tasks, setTask] = useState(data)
   return (
-    <div>
+    <div className='wrapper'>
       <Header />
       <Main tasks={tasks} setTask={setTask} />
       <Footer />
