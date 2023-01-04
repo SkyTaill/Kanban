@@ -20,6 +20,7 @@ const Header = () => {
         }
     }
 
+
     return (
 
         <header className={css.header}>
@@ -45,14 +46,15 @@ const Header = () => {
 
 }
 
+
 function CheckProfMenu(props) {
     const state = props.state;
 
     if (state) {
         return (
-            <div className={css.prof_menu}>
-                <h3 className={css.text_profil}>Profile</h3>
-                <h3 className={css.logOut}>Log Out</h3>
+            <div id='profil-menu' className={css.prof_menu}>
+                <h3 id='profil-menu' className={css.text_profil}>Profile</h3>
+                <h3 id='profil-menu' className={css.logOut}>Log Out</h3>
             </div>
         )
     }
@@ -61,6 +63,17 @@ function CheckProfMenu(props) {
     )
 }
 
+// window.addEventListener('click', e => {
+//     const target = e.target
+//     if (target.id === "prof-menu") {
+//         console.log(target.id)
+//         console.log("asdasdasd")
+//     } else {
+//         console.log(target.id)
+//         console.log("123123")
 
+
+//     }
+// })
 
 export default Header;
