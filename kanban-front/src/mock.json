@@ -7,6 +7,20 @@
 		"status": "backlog"
 	},
 	{
+		"id": "329qwe4548905",
+		"title": "Add U2it tests",
+		"description": "Cover application with Unit tests",
+		"created": "2021-09-27T11:10:37.552Z",
+		"status": "backlog"
+	},
+	{
+		"id": "3297wqe54548905",
+		"title": "Add 3it tests",
+		"description": "Cover application with Unit tests",
+		"created": "2021-09-27T11:10:37.552Z",
+		"status": "backlog"
+	},
+	{
 		"id": "37302620983060905",
 		"title": "Fixss Save to collection icon",
 		"description": "Icon in 'Save to collection' component is broken now, we need to fix it",
@@ -21,6 +35,48 @@
 		"status": "backlog"
 	},
 	{
+		"id": "89962312358984",
+		"title": "Add2 user section to settings",
+		"description": "There should be a user section in setting where users can edit their profile data: name, phone, email, etc.",
+		"created": "2021-09-27T11:13:57.611Z",
+		"status": "backlog"
+	},
+	{
+		"id": "89961235258984",
+		"title": "Add3 user section to settings",
+		"description": "There should be a user section in setting where users can edit their profile data: name, phone, email, etc.",
+		"created": "2021-09-27T11:13:57.611Z",
+		"status": "backlog"
+	},
+	{
+		"id": "8996212358984",
+		"title": "Add4 user section to settings",
+		"description": "There should be a user section in setting where users can edit their profile data: name, phone, email, etc.",
+		"created": "2021-09-27T11:13:57.611Z",
+		"status": "backlog"
+	},
+	{
+		"id": "8996231238984",
+		"title": "Add5 user section to settings",
+		"description": "There should be a user section in setting where users can edit their profile data: name, phone, email, etc.",
+		"created": "2021-09-27T11:13:57.611Z",
+		"status": "backlog"
+	},
+	{
+		"id": "8996221358984",
+		"title": "Add6 user section to settings",
+		"description": "There should be a user section in setting where users can edit their profile data: name, phone, email, etc.",
+		"created": "2021-09-27T11:13:57.611Z",
+		"status": "backlog"
+	},
+	{
+		"id": "8991265258984",
+		"title": "Add7 user section to settings",
+		"description": "There should be a user section in setting where users can edit their profile data: name, phone, email, etc.",
+		"created": "2021-09-27T11:13:57.611Z",
+		"status": "backlog"
+	},
+	{
 		"id": "15694889400239302",
 		"title": "Update API routes",
 		"description": "Update API routes to use the newest versions",
@@ -28,10 +84,38 @@
 		"status": "inProgress"
 	},
 	{
+		"id": "1569481239302",
+		"title": "Update API 1",
+		"description": "Update API routes to use the newest versions",
+		"created": "2021-09-27T11:14:58.972Z",
+		"status": "ready"
+	},
+	{
+		"id": "15612339302",
+		"title": "Update API 2",
+		"description": "Update API routes to use the newest versions",
+		"created": "2021-09-27T11:14:58.972Z",
+		"status": "ready"
+	},
+	{
+		"id": "156941239302",
+		"title": "Update API 3",
+		"description": "Update API routes to use the newest versions",
+		"created": "2021-09-27T11:14:58.972Z",
+		"status": "ready"
+	},
+	{
+		"id": "1569412239302",
+		"title": "Update API 4",
+		"description": "Update API routes to use the newest versions",
+		"created": "2021-09-27T11:14:58.972Z",
+		"status": "ready"
+	},
+	{
 		"id": "45652229644291793",
 		"title": "Implement loader",
 		"description": "Fetching data from server takes some time. We need to implement a loader so user can see that data fetching is in progress.",
 		"created": "2021-09-27T11:16:47.091Z",
-		"status": "done"
+		"status": "finished"
 	}
 ]

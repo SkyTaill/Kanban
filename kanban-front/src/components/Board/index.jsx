@@ -1,19 +1,25 @@
 import { LIST_TYPES, LIST_COPY } from '../../config';
 import React from 'react';
 import List from '../List';
-import "./index.css"
+import css from "./index.module.css"
 
 const Board = props => {
     const { tasks, setTask } = props
 
     return (
-        <div>
+        <div className={css.block}>
+
             {Object.values(LIST_TYPES).map(type => {
                 const listTasks = tasks.filter(task => task.status === type)
                 return (
-                    <List key={type} type={type} title={LIST_COPY[type]} tasks={listTasks} setTask={setTask} />
+                    <div key={type} >
+                        <List key={type} type={type} title={LIST_COPY[type]} tasks={listTasks} setTask={setTask} />
+
+                    </div>
                 )
             })}
+
+
         </div>
     )
 }

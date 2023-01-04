@@ -1,13 +1,16 @@
 const LIST_TYPES = {
 	BACKLOG: 'backlog',
+	READY: 'ready',
 	IN_PROGRESS: 'inProgress',
-	DONE: 'done',
+	FINISHED: 'finished',
+
 }
 
 const LIST_COPY = {
 	[LIST_TYPES.BACKLOG]: 'Backlog',
 	[LIST_TYPES.IN_PROGRESS]: 'In progress',
-	[LIST_TYPES.DONE]: 'Done',
+	[LIST_TYPES.FINISHED]: 'Finished',
+	[LIST_TYPES.READY]: 'Ready',
 }
 
 const LIST_COLORS = {
@@ -16,4 +19,4 @@ const LIST_COLORS = {
 	[LIST_TYPES.DONE]: '#a0b959',
 }
 
-export { LIST_TYPES, LIST_COPY, LIST_COLORS }
+export { LIST_TYPES, LIST_COPY, LIST_COLORS, }

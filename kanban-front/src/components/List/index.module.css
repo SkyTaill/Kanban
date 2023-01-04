@@ -1,0 +1,79 @@
+.task {
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: 7px 11px;
+    padding: 8px;
+
+}
+
+.task:hover {
+    text-decoration: underline;
+}
+
+.taskBlock {
+
+    margin-left: 30px;
+    width: 282px;
+    background: #EBECF0;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 20%);
+
+
+
+}
+
+.scrollBlock {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.scrollBlock::-webkit-scrollbar-thumb {
+
+    padding-right: 2px;
+    background: #CBCBCB;
+    border-radius: 5px;
+}
+
+.scrollBlock::-webkit-scrollbar-track {
+    background-color: rgb(236, 231, 231);
+}
+
+.scrollBlock::-webkit-scrollbar {
+    width: 10px;
+
+
+}
+
+.title {
+    padding-top: 5px;
+    margin-left: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.blockButton {
+    padding-top: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    border: 0;
+    border-radius: 10px;
+    color: #5E6C84;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: #EBECF0;
+}
+
+.blockButton:hover {
+    color: #000;
+
+}
