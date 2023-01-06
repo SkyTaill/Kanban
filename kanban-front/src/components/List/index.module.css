@@ -77,3 +77,44 @@
     color: #000;
 
 }
+
+.profil {
+    z-index: 1;
+    display: column;
+}
+
+.prof_menu {
+    margin-left: -50px;
+    margin-bottom: -60px;
+    width: 134px;
+    height: 60px;
+    left: 195px;
+    top: 61px;
+
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.text_profil {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 1px;
+    color: #000000;
+    padding-top: 10px;
+
+}
+
+.logOut {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 1px;
+    color: #000000;
+    margin-top: -16px;
+}
