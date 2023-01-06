@@ -83,38 +83,22 @@
     display: column;
 }
 
-.prof_menu {
-    margin-left: -50px;
-    margin-bottom: -60px;
-    width: 134px;
-    height: 60px;
-    left: 195px;
-    top: 61px;
 
-    text-align: center;
-    background: #FFFFFF;
+
+.block_menu {
+    composes: taskBlock;
+    width: 250px;
+    min-height: 60px;
     border-radius: 5px;
-}
-
-.text_profil {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    margin-top: 1px;
-    color: #000000;
-    padding-top: 10px;
+    margin-left: 40px;
 
 }
 
-.logOut {
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
-    margin-top: 1px;
-    color: #000000;
-    margin-top: -16px;
+.scrollBlock_menu {
+    composes: scrollBlock;
+    max-height: 90px;
+    margin-right: 5px;
+
+
+
 }
