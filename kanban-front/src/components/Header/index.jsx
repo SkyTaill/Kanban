@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import css from "./index.module.css"
 
 
@@ -9,14 +9,32 @@ const Header = () => {
 
     const [state, setState] = useState(false);
 
+    useEffect(() => {
+        // window.removeEventListener("click", clickToClose);
+        window.addEventListener('click', clicker)
+        return () => {
+            window.removeEventListener("click", clicker);
+        };
+    });
 
+    // const click = () => {
+    //     if (state) {
+    //         setState(false);
+    //     } else {
+    //         setState(true);
+    //     }
+    // }
 
-
-    const click = () => {
-        if (state) {
-            setState(false);
+    const clicker = (props) => {
+        const target = props.target
+        if (target.id === "profil-menu") {
+            if (state) {
+                setState(false);
+            } else {
+                setState(true);
+            }
         } else {
-            setState(true);
+            setState(false);
         }
     }
 
@@ -29,7 +47,7 @@ const Header = () => {
                 <div className={css.profil}>
                     <div className={css.header_profil}>
                         <div className={css.svg}></div>
-                        <button className={state ? css.svg_down : css.svg_up} onClick={click}></button>
+                        <button className={state ? css.svg_down : css.svg_up} id='profil-menu'></button>
                     </div>
 
 
