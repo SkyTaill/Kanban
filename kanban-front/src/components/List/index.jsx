@@ -29,7 +29,7 @@ const List = props => {
         }
     }
 
-    const { title, tasks } = props
+    const { title, tasks, listTasksAdding } = props
     return (
         <div>
             <div className={css.taskBlock}>
@@ -49,6 +49,7 @@ const List = props => {
                     click={click}
                     title={title}
                     state={state}
+
                 />
 
             </div>
@@ -56,6 +57,8 @@ const List = props => {
                 state={state}
                 title={title}
                 tasks={tasks}
+                listTasksAdding={listTasksAdding}
+
             />
         </div>
 
@@ -87,14 +90,14 @@ function CheckBlockMenu(props) {
     const state = props.state;
     const title = props.title;
     const tasks = props.tasks;
-
+    const listTasksAdding = props.listTasksAdding;
     if (state) {
         if (props.title !== "Backlog") {
 
             return (
                 <div id={title} className={css.block_menu}>
                     <div className={css.scrollBlock_menu}>
-                        {tasks.map(task => {
+                        {listTasksAdding.map(task => {
                             return (
                                 <button key={task.id} className={css.task_menu}>{task.title}</button>
                             )
