@@ -94,11 +94,39 @@
 
 }
 
+.task_menu {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    border: 0;
+    color: #000000;
+    margin: 2px 11px;
+
+    width: 210px;
+    height: 35px;
+
+}
+
+.task_menu:hover {
+    background: #DEDEDE;
+}
+
 .scrollBlock_menu {
     composes: scrollBlock;
     max-height: 90px;
     margin-right: 5px;
 
+}
 
+.svg_down {
+    mask-image: url("../../svg/button-pic-down.svg");
+    height: 20px;
+    width: 20px;
+    margin-left: 12px;
+    margin-top: 9px;
+    background-color: black;
+    display: inline-block;
 
 }

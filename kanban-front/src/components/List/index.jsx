@@ -45,7 +45,11 @@ const List = props => {
                     </div>
 
                 </div>
-                <button className={css.blockButton} id={title} onClick={click}>+Add card</button>
+                <ButtonAddCard
+                    click={click}
+                    title={title}
+                    state={state}
+                />
 
             </div>
             <CheckBlockMenu
@@ -58,6 +62,23 @@ const List = props => {
 
     )
 
+
+}
+
+
+function ButtonAddCard(props) {
+    const click = props.click;
+    const title = props.title;
+    const state = props.state;
+    if (!state) {
+        return (
+            <button className={css.blockButton} id={title} onClick={click}>+Add card</button>
+        )
+    } else {
+        return (
+            <div className={css.svg_down}></div>
+        )
+    }
 
 }
 
@@ -75,7 +96,7 @@ function CheckBlockMenu(props) {
                     <div className={css.scrollBlock_menu}>
                         {tasks.map(task => {
                             return (
-                                <div key={task.id} className={css.task}>{task.title}</div>
+                                <button key={task.id} className={css.task_menu}>{task.title}</button>
                             )
                         })
                         }
