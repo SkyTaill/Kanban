@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom'
 import css from "./index.module.css"
 
 const List = props => {
@@ -45,7 +45,9 @@ const List = props => {
                     <div className={css.scrollBlock}>
                         {tasks.map(task => {
                             return (
-                                <div key={task.id} className={css.task}>{task.title}</div>
+                                <Link to={`/tasks/${task.id}`} key={task.id} className={css.taskLink}>
+                                    <div key={task.id} className={css.task}>{task.title}</div>
+                                </Link>
                             )
                         })
                         }

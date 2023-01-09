@@ -5,7 +5,7 @@ import data from './mock.json'
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Header from './components/Header';
-
+import { BrowserRouter } from 'react-router-dom';
 function App() {
   const [tasks, setTask] = useState(data)
 
@@ -18,9 +18,11 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <Header />
-      <Main tasks={tasks} setTask={setTask} editTask={editTask} />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Main tasks={tasks} setTask={setTask} editTask={editTask} />
+        <Footer />
+      </BrowserRouter>
     </div>
 
   );
