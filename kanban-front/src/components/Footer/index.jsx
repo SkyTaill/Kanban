@@ -18,7 +18,7 @@ class Footer extends React.Component {
                 finishedCount++
             }
         });
-        console.log(backlogCoutn)
+
         return (
             <footer className={css.footer}>
                 <div className={css.container}>
