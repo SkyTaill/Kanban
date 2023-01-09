@@ -4,7 +4,7 @@ import List from '../List';
 import css from "./index.module.css"
 
 const Board = props => {
-    const { tasks, setTask } = props
+    const { tasks, setTask, editTask } = props
 
     return (
         <div className={css.block}>
@@ -18,6 +18,7 @@ const Board = props => {
                             listTasks={listTasks}
                             setTask={setTask}
                             tasks={tasks}
+                            editTask={editTask}
                         />
                     </div>
                 )
@@ -33,6 +34,9 @@ function CheakAndAddCard(props) {
     const listTasks = props.listTasks;
     const setTask = props.setTask;
     const tasks = props.tasks;
+    const editTask = props.editTask;
+
+    //TODO убрать listTasksAdding и вынести логику внутри LIst
     var listTasksAdding
     if (type === "ready") {
         listTasksAdding = tasks.filter(task => task.status === "backlog")
@@ -46,7 +50,7 @@ function CheakAndAddCard(props) {
 
 
     return (
-        <List key={type} type={type} title={LIST_COPY[type]} tasks={listTasks} setTask={setTask} listTasksAdding={listTasksAdding} />
+        <List key={type} type={type} title={LIST_COPY[type]} tasks={listTasks} editTask={editTask} setTask={setTask} listTasksAdding={listTasksAdding} />
     )
 }
 

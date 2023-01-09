@@ -29,7 +29,14 @@ const List = props => {
         }
     }
 
-    const { title, tasks, listTasksAdding } = props
+    const { title, tasks, listTasksAdding, setTask, editTask, type } = props
+    //title название блока
+    //tasks список задачь внутри блока
+    //listTasksAdding список задачь которые мы можем добавить в блок
+    //создание новой модели с задачами
+    //editTask метод добавления новых задачь 
+    //type задачи
+
     return (
         <div>
             <div className={css.taskBlock}>
@@ -56,7 +63,12 @@ const List = props => {
             <CheckBlockMenu
                 state={state}
                 title={title}
+                setTask={setTask}
                 tasks={tasks}
+                editTask={editTask}
+                type={type}
+                // tasks={tasks}
+
                 listTasksAdding={listTasksAdding}
 
             />
@@ -89,7 +101,8 @@ function ButtonAddCard(props) {
 function CheckBlockMenu(props) {
     const state = props.state;
     const title = props.title;
-    const tasks = props.tasks;
+    const type = props.type;
+    const editTask = props.editTask;
     const listTasksAdding = props.listTasksAdding;
     if (state) {
         if (props.title !== "Backlog") {
@@ -98,8 +111,15 @@ function CheckBlockMenu(props) {
                 <div id={title} className={css.block_menu}>
                     <div className={css.scrollBlock_menu}>
                         {listTasksAdding.map(task => {
+                            //добавляем элемент в новый блок
+                            const AddTask = () => {
+                                const newTask = task;
+                                newTask.status = type
+                                editTask(newTask)
+                            }
+
                             return (
-                                <button key={task.id} className={css.task_menu}>{task.title}</button>
+                                <button key={task.id} className={css.task_menu} onClick={AddTask}>{task.title}</button>
                             )
                         })
                         }
@@ -114,6 +134,8 @@ function CheckBlockMenu(props) {
         null
     )
 }
+
+
 
 
 
