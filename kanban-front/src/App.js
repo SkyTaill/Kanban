@@ -1,4 +1,4 @@
-
+import uniqid from 'uniqid'
 import './App.css';
 import { useState } from 'react';
 import data from './mock.json'
@@ -16,12 +16,24 @@ function App() {
     setTask([...newArray2, editInputTask])
   }
 
+  const addNewTask = (title, description) => {
+    const task = {
+      id: uniqid(),
+      title,
+      description,
+      created: new Date().toISOString(),
+      status: 'backlog',
+    }
+    setTask([...tasks, task]);
+  }
+
+
   return (
     <div className='wrapper'>
       <BrowserRouter>
         <Header />
-        <Main tasks={tasks} setTask={setTask} editTask={editTask} />
-        <Footer />
+        <Main tasks={tasks} setTask={setTask} editTask={editTask} addNewTask={addNewTask} />
+        <Footer tasks={tasks} />
       </BrowserRouter>
     </div>
 

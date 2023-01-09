@@ -4,7 +4,7 @@ import List from '../List';
 import css from "./index.module.css"
 
 const Board = props => {
-    const { tasks, setTask, editTask } = props
+    const { tasks, setTask, editTask, addNewTask } = props
 
     return (
         <div className={css.block}>
@@ -19,6 +19,7 @@ const Board = props => {
                             setTask={setTask}
                             tasks={tasks}
                             editTask={editTask}
+                            addNewTask={addNewTask}
                         />
                     </div>
                 )
@@ -35,6 +36,7 @@ function CheakAndAddCard(props) {
     const setTask = props.setTask;
     const tasks = props.tasks;
     const editTask = props.editTask;
+    const addNewTask = props.addNewTask;
 
     //TODO убрать listTasksAdding и вынести логику внутри LIst
     var listTasksAdding
@@ -50,7 +52,7 @@ function CheakAndAddCard(props) {
 
 
     return (
-        <List key={type} type={type} title={LIST_COPY[type]} tasks={listTasks} editTask={editTask} setTask={setTask} listTasksAdding={listTasksAdding} />
+        <List key={type} type={type} title={LIST_COPY[type]} tasks={listTasks} editTask={editTask} setTask={setTask} listTasksAdding={listTasksAdding} addNewTask={addNewTask} />
     )
 }
 

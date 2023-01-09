@@ -16,9 +16,10 @@ const List = props => {
 
     const clicker = (props) => {
         const target = props.target
-
-        if (target.id !== title) {
-            setState(false);
+        if (target.id !== "block-menu") {
+            if (target.id !== title) {
+                setState(false);
+            }
         }
     }
     const click = () => {
@@ -29,7 +30,7 @@ const List = props => {
         }
     }
 
-    const { title, tasks, listTasksAdding, setTask, editTask, type } = props
+    const { title, tasks, listTasksAdding, setTask, editTask, type, addNewTask } = props
     //title название блока
     //tasks список задачь внутри блока
     //listTasksAdding список задачь которые мы можем добавить в блок
@@ -59,6 +60,7 @@ const List = props => {
                     title={title}
                     state={state}
 
+
                 />
 
             </div>
@@ -70,7 +72,7 @@ const List = props => {
                 editTask={editTask}
                 type={type}
                 // tasks={tasks}
-
+                addNewTask={addNewTask}
                 listTasksAdding={listTasksAdding}
 
             />
@@ -87,6 +89,7 @@ function ButtonAddCard(props) {
     const click = props.click;
     const title = props.title;
     const state = props.state;
+
     if (!state) {
         return (
             <button className={css.blockButton} id={title} onClick={click}>+Add card</button>
@@ -106,6 +109,7 @@ function CheckBlockMenu(props) {
     const type = props.type;
     const editTask = props.editTask;
     const listTasksAdding = props.listTasksAdding;
+    const addNewTask = props.addNewTask;
     if (state) {
         if (props.title !== "Backlog") {
 
@@ -129,6 +133,22 @@ function CheckBlockMenu(props) {
                 </div>
 
             )
+        } else {
+            const addNewTaskButton = (props) => {
+                const title = document.getElementsByName("title");
+                const description = document.getElementsByName("description");
+                addNewTask(title[0].value, description[0].value)
+
+
+            }
+            return (<div id='block-menu' className={css.block_menu}>
+                <div id='block-menu' className={css.input_block}>
+                    <input type="text" name="title" id='block-menu' className={css.input} />
+                    <input type="text" name="description" id='block-menu' className={css.input} />
+                    <button className={css.button} onClick={addNewTaskButton}>Submit</button>
+                </div>
+
+            </div>)
         }
 
     }

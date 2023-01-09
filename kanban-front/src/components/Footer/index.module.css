@@ -10,3 +10,19 @@
     align-items: center;
     font-family: 'Nunito Sans';
 }
+
+.statistic {
+    display: flex;
+}
+
+.statistic_value {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    margin-left: 30px;
+
+    color: #FFFFFF;
+}

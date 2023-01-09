@@ -27,14 +27,17 @@ const Header = () => {
 
     const clicker = (props) => {
         const target = props.target
-        if (target.id === "profil-menu") {
-            if (state) {
-                setState(false);
-            } else {
-                setState(true);
+        if (target.id !== "block-menu") {
+            if (target.id === "profil-menu") {
+                if (state) {
+                    setState(false);
+                } else {
+                    setState(true);
+                }
             }
-        } else {
-            setState(false);
+            else {
+                setState(false);
+            }
         }
     }
 
